@@ -1,11 +1,36 @@
-# FacialEmotionDetection
-Our Facial Emotion Detection project harnesses the power of advanced technologies to identify and analyze facial expressions. This innovative system seamlessly integrates two essential components:
+# Real-Time Webcam Facial Emotion Classifier
 
-Face Detection with face_recognition Library:
-We leverage the robust capabilities of the face_recognition library in Python to accurately detect human faces within images. By employing this library, we locate facial features and create precise bounding boxes around them. This initial step lays the foundation for our emotion recognition process.
+This repository contains the code for a real-time facial emotion classifier using a webcam. The classifier is built using Python and Keras, leveraging libraries like OpenCV, face-recognition, numpy, and dlib for facial detection and emotion classification.
 
-Emotion Classification using Convolutional Neural Networks (CNN):
-To delve deeper into the emotions expressed on these detected faces, we implement a Convolutional Neural Network (CNN) model. Trained on a comprehensive dataset from Kaggle, this CNN model has acquired the ability to classify facial features. By harnessing the power of deep learning, we analyze the subtle nuances of expressions, distinguishing emotions such as happiness, sadness, surprise, and more.
+## Requirements
 
-Through the seamless integration of face detection and emotion classification, our Facial Emotion Detection project offers a comprehensive solution for understanding human emotions in diverse contexts. Whether used for research, entertainment, or real-time applications, this project provides valuable insights into the intricate world of facial expressions.
-**Dataset Link:** https://www.kaggle.com/datasets/msambare/fer2013
+The project depends on specific versions of libraries. Ensure you have the following versions installed:
+
+- Keras==2.6.0
+- opencv-python==4.5.3.56
+- face-recognition==1.3.0
+- numpy==1.21.2
+- dlib==19.22.99
+
+## Installation
+
+To set up the project, follow these steps:
+
+1. Clone the repository: git clone https://github.com/Alishahryar1/Realtime-Facial-Emotion-Classifier
+2. Navigate to the cloned directory: cd Realtime-Facial-Emotion-Classifier
+3. Install the required packages: pip install -r requirements.txt 
+
+## Usage
+
+To run the real-time facial emotion classifier:
+
+1. Execute the main script: python main.py
+2. Ensure your webcam is connected and permitted to be used by the script.
+
+The script will open a window displaying the webcam feed. Faces detected in the feed will be analyzed for emotion, and the predicted emotion will be displayed on the screen.
+
+## How It Works
+
+The classifier uses `dlib` and `face-recognition` for detecting faces in the webcam feed. Once a face is detected, the region of interest is preprocessed and fed into a trained Keras model to classify the emotion.
+
+The emotions classified can include happiness, sadness, anger, surprise, etc., depending on the trained model used.
