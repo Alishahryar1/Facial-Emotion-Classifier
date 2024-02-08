@@ -68,8 +68,8 @@ model.compile(optimizer = 'adam', loss='categorical_crossentropy', metrics=['acc
 print(model.summary())
 
 
-train_path = "C:\\Users\\MuazAhmad\\Downloads\\archive\\imagedataset\\train"
-test_path = "C:\\Users\\MuazAhmad\\Downloads\\archive\\imagedataset\\validation"
+train_path = "C:\\Users\\Ali\\Downloads\\archive\\imagedataset\\train"
+test_path = "C:\\Users\\Ali\\Downloads\\archive\\imagedataset\\validation"
 
 num_train_imgs = 0
 for root, dirs, files in os.walk(train_path):
